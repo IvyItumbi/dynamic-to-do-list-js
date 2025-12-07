@@ -13,34 +13,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const li = document.createElement('li');
-
-        const span = document.createElement('span');
-        span.textContent = taskText;
+        li.textContent = taskText;
 
         const removeBtn = document.createElement('button');
         removeBtn.textContent = "Remove";
-        removeBtn.className = "remove-btn";
+        removeBtn.className = 'remove-btn';
 
-        removeBtn.onclick = function () {
+        removeBtn.onclick = function() {
             taskList.removeChild(li);
         };
 
-        li.appendChild(span);
         li.appendChild(removeBtn);
-
         taskList.appendChild(li);
 
-        
         taskInput.value = "";
     }
 
     addButton.addEventListener('click', addTask);
 
-    taskInput.addEventListener('keypress', function (e) {
+    taskInput.addEventListener('keypress', function(e) {
         if (e.key === 'Enter') {
             addTask();
         }
     });
 
-    taskInput.focus();
 });
