@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         removeBtn.textContent = "Remove";
         removeBtn.className = 'remove-btn';
 
-        removeBtn.onclick = function() {
+        removeBtn.onclick = function () {
             taskList.removeChild(li);
         };
 
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     addButton.addEventListener('click', addTask);
 
-    taskInput.addEventListener('keypress', function(e) {
+    taskInput.addEventListener('keypress', function (e) {
         if (e.key === 'Enter') {
             addTask();
         }
